@@ -5,8 +5,8 @@
         '
         ' GET: /HelloWorld
 
-        Public Function Index() As String
-            Return "This is my default action..."
+        Public Function Index() As ActionResult
+            Return View()
         End Function
 
         Public Function Welcome(ByVal name As String, Optional ByVal numTimes As Integer = 1) As String

@@ -222,6 +222,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="packages.config" />
     <Content Include="Views\HelloWorld\Index.vbhtml" />
+    <Content Include="Views\HelloWorld\Welcome.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />

@@ -169,24 +169,49 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <Content Include="Content\ie.css" />
+    <Content Include="Content\images\ie.css" />
+    <Content Include="Content\images\style.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\templatemo_style.css" />
+    <Content Include="Content\themes\base\images\body_bg.gif" />
+    <Content Include="Content\themes\base\images\body_bg.png" />
+    <Content Include="Content\themes\base\images\body_t.gif" />
+    <Content Include="Content\themes\base\images\body_t.png" />
+    <Content Include="Content\themes\base\images\box_b.gif" />
+    <Content Include="Content\themes\base\images\box_bg.gif" />
+    <Content Include="Content\themes\base\images\box_t.gif" />
+    <Content Include="Content\themes\base\images\btn_learn_more.gif" />
+    <Content Include="Content\themes\base\images\btn_more.gif" />
     <Content Include="Content\themes\base\images\btn_search.gif" />
+    <Content Include="Content\themes\base\images\btn_zoom.gif" />
     <Content Include="Content\themes\base\images\DemoBtn.gif" />
     <Content Include="Content\themes\base\images\demoLargeButton.png" />
     <Content Include="Content\themes\base\images\dt_bg.gif" />
+    <Content Include="Content\themes\base\images\footer.gif" />
     <Content Include="Content\themes\base\images\footer_bg.gif" />
+    <Content Include="Content\themes\base\images\footer_ie.gif" />
     <Content Include="Content\themes\base\images\header_1.jpg" />
     <Content Include="Content\themes\base\images\header_2.jpg" />
     <Content Include="Content\themes\base\images\header_bg.gif" />
     <Content Include="Content\themes\base\images\logo.gif" />
+    <Content Include="Content\themes\base\images\menu_1.gif" />
+    <Content Include="Content\themes\base\images\menu_2.gif" />
+    <Content Include="Content\themes\base\images\menu_3.gif" />
+    <Content Include="Content\themes\base\images\menu_4.gif" />
+    <Content Include="Content\themes\base\images\menu_5.gif" />
     <Content Include="Content\themes\base\images\page_bg.gif" />
+    <Content Include="Content\themes\base\images\paper_b.gif" />
+    <Content Include="Content\themes\base\images\paper_bg.gif" />
     <Content Include="Content\themes\base\images\photo_1.jpg" />
     <Content Include="Content\themes\base\images\photo_2.jpg" />
     <Content Include="Content\themes\base\images\photo_3.jpg" />
     <Content Include="Content\themes\base\images\photo_4.jpg" />
     <Content Include="Content\themes\base\images\photo_5.jpg" />
     <Content Include="Content\themes\base\images\photo_6.jpg" />
+    <Content Include="Content\themes\base\images\picture_1.jpg" />
+    <Content Include="Content\themes\base\images\picture_2.jpg" />
+    <Content Include="Content\themes\base\images\picture_3.jpg" />
     <Content Include="Content\themes\base\images\templatemo_bg.jpg" />
     <Content Include="Content\themes\base\images\templatemo_bottom_bg.jpg" />
     <Content Include="Content\themes\base\images\templatemo_footer.jpg" />
@@ -208,6 +233,9 @@
     <Content Include="Content\themes\base\images\templatemo_thumb1.jpg" />
     <Content Include="Content\themes\base\images\templatemo_thumb2.jpg" />
     <Content Include="Content\themes\base\images\templatemo_top_bg.jpg" />
+    <Content Include="Content\themes\base\images\title_latest_designs.gif" />
+    <Content Include="Content\themes\base\images\title_latest_news.gif" />
+    <Content Include="Content\themes\base\images\title_main_page.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -262,6 +290,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\base\minified\style.css" />
     <Content Include="packages.config" />
     <Content Include="Views\HelloWorld\Index.vbhtml" />
     <Content Include="Views\HelloWorld\Welcome.vbhtml" />

@@ -13,5 +13,9 @@
             Return View()
         End Function
 
+        Public Function OnlineMovieStoreTemplate() As ActionResult
+            Return View()
+        End Function
+
     End Class
 End Namespace

@@ -127,9 +127,11 @@
   <ItemGroup>
     <Compile Include="Controllers\HelloWorldController.vb" />
     <Compile Include="Controllers\LamanSeniController.vb" />
+    <Compile Include="Controllers\MoviesController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Movie.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -266,6 +268,11 @@
     <Content Include="Views\LamanSeni\Index.vbhtml" />
     <Content Include="Views\LamanSeni\Guitar.vbhtml" />
     <Content Include="Views\LamanSeni\OnlineMovieStoreTemplate.vbhtml" />
+    <Content Include="Views\Movies\Index.vbhtml" />
+    <Content Include="Views\Movies\Details.vbhtml" />
+    <Content Include="Views\Movies\Create.vbhtml" />
+    <Content Include="Views\Movies\Edit.vbhtml" />
+    <Content Include="Views\Movies\Delete.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
@@ -327,7 +334,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>1461</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:1330/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

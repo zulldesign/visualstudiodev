@@ -1,0 +1,13 @@
+C:\Users\User\Documents\Visual Studio 2012\Projects\visualstudiodev\visualstudiodev.Tests\bin\Debug\visualstudiodev.Tests.dll.config
+C:\Users\User\Documents\Visual Studio 2012\Projects\visualstudiodev\visualstudiodev.Tests\bin\Debug\visualstudiodev.Tests.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\visualstudiodev\visualstudiodev.Tests\bin\Debug\visualstudiodev.Tests.pdb
+C:\Users\User\Documents\Visual Studio 2012\Projects\visualstudiodev\visualstudiodev.Tests\bin\Debug\visualstudiodev.Tests.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\visualstudiodev\visualstudiodev.Tests\bin\Debug\visualstudiodev.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\visualstudiodev\visualstudiodev.Tests\bin\Debug\EntityFramework.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\visualstudiodev\visualstudiodev.Tests\bin\Debug\visualstudiodev.pdb
+C:\Users\User\Documents\Visual Studio 2012\Projects\visualstudiodev\visualstudiodev.Tests\bin\Debug\visualstudiodev.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\visualstudiodev\visualstudiodev.Tests\bin\Debug\EntityFramework.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\visualstudiodev\visualstudiodev.Tests\obj\Debug\visualstudiodev.Tests.vbprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2012\Projects\visualstudiodev\visualstudiodev.Tests\obj\Debug\visualstudiodev.Tests.dll
+C:\Users\User\Documents\Visual Studio 2012\Projects\visualstudiodev\visualstudiodev.Tests\obj\Debug\visualstudiodev.Tests.xml
+C:\Users\User\Documents\Visual Studio 2012\Projects\visualstudiodev\visualstudiodev.Tests\obj\Debug\visualstudiodev.Tests.pdb

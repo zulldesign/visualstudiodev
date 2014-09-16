@@ -17,7 +17,6 @@ c:\users\user\documents\visual studio 2012\Projects\visualstudiodev\visualstudio
 c:\users\user\documents\visual studio 2012\Projects\visualstudiodev\visualstudiodev\bin\System.Web.WebPages.xml
 c:\users\user\documents\visual studio 2012\Projects\visualstudiodev\visualstudiodev\bin\System.Web.WebPages.Deployment.xml
 c:\users\user\documents\visual studio 2012\Projects\visualstudiodev\visualstudiodev\bin\System.Web.WebPages.Razor.xml
-c:\users\user\documents\visual studio 2012\Projects\visualstudiodev\visualstudiodev\obj\Debug\visualstudiodev.vbprojResolveAssemblyReference.cache
 c:\users\user\documents\visual studio 2012\Projects\visualstudiodev\visualstudiodev\obj\Debug\visualstudiodev.Resources.resources
 c:\users\user\documents\visual studio 2012\Projects\visualstudiodev\visualstudiodev\obj\Debug\visualstudiodev.vbproj.GenerateResource.Cache
 c:\users\user\documents\visual studio 2012\Projects\visualstudiodev\visualstudiodev\obj\Debug\visualstudiodev.dll

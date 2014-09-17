@@ -169,8 +169,6 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <Content Include="Content\images\body_bg.gif" />
-    <Content Include="Content\images\body_bg.png" />
     <Content Include="Content\images\cronaldo2.gif" />
     <Content Include="Content\images\style.css" />
     <Content Include="Content\style.css" />

@@ -23,8 +23,8 @@ End Code
     <div class="inner">
       <div id="content">
         <div>
-          <h2>Content,</h2>
-          <p>Please replace this text with the original one. Please replace this font with the customised one. please replase this font. This is demo text please replase this with your text.</p>
+          <h2>Pembangunan ASP.NET</h2>
+          <p>Microsoft Visual Studio LightSwitch adalah sebuah development tool yang menyederhanakan dan mempermudah proses pembuatan aplikasi data-driven baik untuk desktop maupun web application.</p>
         </div>
       </div>
       <!-- end content -->

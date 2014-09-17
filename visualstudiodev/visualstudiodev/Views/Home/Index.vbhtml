@@ -45,7 +45,7 @@ End Code
       <div class="clear"></div>
     </div>
     <!-- end .inner -->
-    <div id="footer"> <img src="/Content/themes/base/images/footer.gif" width="435" height="196" alt="tortoise" class="footer" /> <img src="/Content/themes/base/images/footer_ie.gif" width="435" height="196" alt="tortoise" class="footerie" /> </div>
+    <div id="footer"> <img src="/Content/themes/base/images/footer.gif" width="435" height="0" alt="tortoise" class="footer" /> <img src="/Content/themes/base/images/footer_ie.gif" width="435" height="0" alt="tortoise" class="footerie" /> </div>
     <!-- end footer -->
   </div>
   <!-- end body -->

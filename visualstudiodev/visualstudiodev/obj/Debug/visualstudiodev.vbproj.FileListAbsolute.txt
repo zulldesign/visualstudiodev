@@ -22,3 +22,4 @@ c:\users\user\documents\visual studio 2012\Projects\visualstudiodev\visualstudio
 c:\users\user\documents\visual studio 2012\Projects\visualstudiodev\visualstudiodev\obj\Debug\visualstudiodev.dll
 c:\users\user\documents\visual studio 2012\Projects\visualstudiodev\visualstudiodev\obj\Debug\visualstudiodev.xml
 c:\users\user\documents\visual studio 2012\Projects\visualstudiodev\visualstudiodev\obj\Debug\visualstudiodev.pdb
+C:\Users\User\Documents\Visual Studio 2012\Projects\visualstudiodev\visualstudiodev\obj\Debug\visualstudiodev.vbprojResolveAssemblyReference.cache

@@ -216,6 +216,7 @@
     <Content Include="Images\Mvc4\VisualStudioMvcMovieSm.PNG" />
     <Content Include="Images\Mvc4\vwd11.png" />
     <Content Include="Images\Mvc4\Windows-Live-Writer_Examining-the-Edit-Methods-and-Edit-View_E344_abcNotValid_thumb.png" />
+    <Content Include="Images\Mvc4\YourProjectWillHave.PNG" />
     <Content Include="packages.config" />
     <None Include="readme.txt" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />

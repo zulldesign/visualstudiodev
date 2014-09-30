@@ -209,6 +209,7 @@
     <Content Include="Images\Facebook\logo.png" />
     <Content Include="Images\Facebook\myjava.js" />
     <Content Include="Images\Facebook\style.css" />
+    <Content Include="Images\Mvc4\P1_finished.PNG" />
     <Content Include="packages.config" />
     <None Include="readme.txt" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />

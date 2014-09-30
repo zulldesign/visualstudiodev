@@ -10,9 +10,9 @@ End Code
 <title>Design and Code an integrated Facebook App</title>
  
 <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
-<link rel="stylesheet" type="text/css" href="~/Content/images/fbstyle/style.css">
+<link rel="stylesheet" type="text/css" href="/Content/images/fbstyle/style.css">
 <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
-<script src="~/Content/images/fbstyle/myjava.js" type="text/javascript"></script>
+<script src="/Content/images/fbstyle/myjava.js" type="text/javascript"></script>
  
  
 </head>
@@ -22,7 +22,7 @@ End Code
  
     <div class="maincontent">
      
-        <div class="logo"><img src="~/Content/images/fbstyle/logo.png" width="379" height="60" alt="webdesigntuts+ logo"></div>
+        <div class="logo"><img src="/Content/images/fbstyle/logo.png" width="379" height="60" alt="webdesigntuts+ logo"></div>
          
         <ul class="tabs">
             <li><a href="#tab1">All</a></li>

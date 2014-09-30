@@ -128,6 +128,7 @@
     <Compile Include="Controllers\HelloWorldController.vb" />
     <Compile Include="Controllers\LamanSeniController.vb" />
     <Compile Include="Controllers\MoviesController.vb" />
+    <Compile Include="Controllers\Mvc3Controller.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -170,6 +171,9 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <Content Include="Content\images\cronaldo2.gif" />
+    <Content Include="Content\images\fbstyle\logo.png" />
+    <Content Include="Content\images\fbstyle\myjava.js" />
+    <Content Include="Content\images\fbstyle\style.css" />
     <Content Include="Content\images\style.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\templatemo_style.css" />
@@ -299,6 +303,7 @@
     <Content Include="Views\Movies\Create.vbhtml" />
     <Content Include="Views\Movies\Edit.vbhtml" />
     <Content Include="Views\Movies\Delete.vbhtml" />
+    <Content Include="Views\Mvc3\Index.vbhtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />

@@ -204,6 +204,8 @@
     <Content Include="Images\arrow.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Images\Ddscrollspymenu\ddscrollspy.js" />
+    <Content Include="Images\Ddscrollspymenu\ddscrollspydemo.css" />
     <Content Include="Images\Facebook\logo.png" />
     <Content Include="Images\Facebook\myjava.js" />
     <Content Include="Images\Facebook\style.css" />

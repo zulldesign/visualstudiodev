@@ -42,7 +42,6 @@ C:\Users\User\Workspace\visualstudiodev\visualstudiodev\visualstudiodev\bin\Syst
 C:\Users\User\Workspace\visualstudiodev\visualstudiodev\visualstudiodev\bin\System.Web.WebPages.xml
 C:\Users\User\Workspace\visualstudiodev\visualstudiodev\visualstudiodev\bin\System.Web.WebPages.Deployment.xml
 C:\Users\User\Workspace\visualstudiodev\visualstudiodev\visualstudiodev\bin\System.Web.WebPages.Razor.xml
-C:\Users\User\Workspace\visualstudiodev\visualstudiodev\visualstudiodev\obj\Debug\visualstudiodev.vbprojResolveAssemblyReference.cache
 C:\Users\User\Workspace\visualstudiodev\visualstudiodev\visualstudiodev\obj\Debug\visualstudiodev.Resources.resources
 C:\Users\User\Workspace\visualstudiodev\visualstudiodev\visualstudiodev\obj\Debug\visualstudiodev.vbproj.GenerateResource.Cache
 C:\Users\User\Workspace\visualstudiodev\visualstudiodev\visualstudiodev\obj\Debug\visualstudiodev.dll

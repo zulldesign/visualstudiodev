@@ -77,37 +77,15 @@
                 <div><img src="/Images/Mvc4/1.png" width="529" height="479" alt="fb"></div>
                 <p>3. Buka folder Model dan Membuat Model baru yang dinamakan PayPalModel untuk mengadakan parameter pembayaran PayPal</p>
                 <div><img src="/Images/Mvc4/11.png" width="529" height="481" alt="fb"></div>
-                <p>public class PayPalModel
-{
-public string cmd { get; set; }
-public string business { get; set; }
-public string no_shipping { get; set; }
-public string @return { get; set; }
-public string cancel_return { get; set; }
-public string notify_url { get; set; }
-public string currency_code { get; set; }
-public string item_name { get; set; }
-public string amount { get; set; }
-public string actionURL { get; set; }
-public PayPalModel(bool useSandbox)
-{
-this.cmd = "_xclick";
-this.business = ConfigurationManager.AppSettings["business"];
-this.cancel_return = ConfigurationManager.AppSettings["cancel_return"];
-this.@return = ConfigurationManager.AppSettings["return"];
-if (useSandbox)
-{
-this.actionURL = ConfigurationManager.AppSettings["test_url"];
-}
-else
-{
-this.actionURL = ConfigurationManager.AppSettings["Prod_url"];
-}
-// We can add parameters here, for example OrderId, CustomerId, etcâ€¦.
-this.notify_url = ConfigurationManager.AppSettings["notify_url"];
-// We can add parameters here, for example OrderId, CustomerId, etcâ€¦.
-this.currency_code = ConfigurationManager.AppSettings["currency_code"];
-}
+                <p>
+&lt;div style=&quot;border: #000080 1px solid; color: #000; font-family: &#39;Courier New&#39;, Courier, Monospace; font-size: 10pt&quot;&gt;
+&lt;div style=&quot;background: #000080; color: #fff; font-family: Verdana, Tahoma, Arial, sans-serif; font-weight: bold; padding: 2px 5px&quot;&gt;Code Snippet&lt;/div&gt;
+&lt;div style=&quot;background: #ddd; max-height: 300px; overflow: auto&quot;&gt;
+&lt;ol start=&quot;37&quot; style=&quot;background: #ffffff; margin: 0 0 0 2.5em; padding: 0 0 0 5px;&quot;&gt;
+&lt;li&gt;&lt;span style=&quot;background:#ffffff;color:#000000&quot;&gt;{&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </p>
                 <p><ul>
                    <li><a href="https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack" target="_blank">Visual Studio Web Developer prasyarat SP1 Express</a></li>

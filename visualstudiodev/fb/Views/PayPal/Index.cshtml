@@ -2,7 +2,7 @@
 @using Microsoft.AspNet.Mvc.Facebook.Models
 @model MyAppUser
 @{
-    ViewBag.Title = "Index";
+	ViewBag.Title = "Index";
 }
 <!DOCTYPE HTML>
 <html>
@@ -23,114 +23,110 @@
  
 <body>
 @{
-    ViewBag.Title = "Home Page";
+	ViewBag.Title = "Home Page";
 }
 @using (Html.BeginForm("ValidateCommand", "PayPal"))
 {
-    <div>
-        <table >
-            <tr>
-                <td>
-                    Nama Produk:
-                </td>
-                <td>
-                    <input type="text" name="product" value="Visual Studio 2013" readonly />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                   Jumlah Harga:
-                </td>
-                <td>
-                   RM <input type="text" name="totalPrice" value="20.00" readonly />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-                <td>
-                    <input type="submit" name="btnConfirm" value="Check Out Dengan Paypal" />
-                </td>
-            </tr>
-        </table>
-    </div>
+	<div>
+		<table >
+			<tr>
+				<td>
+					Nama Produk:
+				</td>
+				<td>
+					<input type="text" name="product" value="Visual Studio 2013" readonly />
+				</td>
+			</tr>
+			<tr>
+				<td>
+				   Jumlah Harga:
+				</td>
+				<td>
+				   RM <input type="text" name="totalPrice" value="20.00" readonly />
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>
+					<input type="submit" name="btnConfirm" value="Check Out Dengan Paypal" />
+				</td>
+			</tr>
+		</table>
+	</div>
 }
 <div class="wrapper">
  
-    <div class="maincontent">        
-         
-        <ul class="tabs">
-            <li><a href="https://www.apphb.com">1. Integrasi ASP.NET MVC PayPal </a></li>            
-        </ul>
+	<div class="maincontent">        
+		 
+		<ul class="tabs">
+			<li><a href="https://www.apphb.com">1. Integrasi ASP.NET MVC PayPal </a></li>            
+		</ul>
  
 <div class="tab_container">
-    <div id="tab1" class="tab_content">
-     
-          <div class="post">
-        </div><!--End Blog Post-->
-         
-        <div class="post">
-                <h3><a href="#">Integrasi ASP.NET MVC PayPal </a></h3>
-                <span class="postInfo">oleh <a href="#">ZullDesign</a> pada 1 Oktober, 2014</span>
-                <p>PayPal adalah perkhidmatan pembayaran dalam talian yang membolehkan anda membayar untuk pembelian, menerima bayaran, atau untuk menghantar dan menerima wang. Menerima perkhidmatan ini, seseorang perlu mengemukakan pelbagai maklumat kewangan kepada PayPal, seperti nombor kad kredit, penghantaran boleh dibuat melalui pos. Selepas itu, transaksi yang dijalankan tanpa perlu mendedahkan butiran kewangan, alamat e-mel dan kata laluan yang mencukupi.</p>
-                <p>untuk maklumat lanjut mengenai perniagaan, sila layari <a href="https://www.paypal.com/us/webapps/mpp/merchant" target="_blank">Laman Web rasmi Paypal</a> untuk perniagaan atau</br><a href="https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/detailed/" target="_blank">https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/detailed/</a></p>
-                <p>Dalam tutorial ini kita mencadangkan untuk mengintegrasikan penyelesaian pembayaran e-dagang PAYPAL.<br />Jadi, kami menggunakan Visual Studio C # dan ASP.NET MVC4 (untuk maklumat lanjut mengenai ASP.NET MVC sila lihat di <a href="https://www.asp.net/mvc/tutorials/mvc-4/getting-started-with-aspnet-mvc4/intro-to-aspnet-mvc-4" target="_blank">https://www.asp.net/mvc/tutorials/mvc-4/getting-started-with-aspnet-mvc4/intro-to-aspnet-mvc-4</a></p>
-                <p>Bersedia? Mari memulakan tutorial ini:</p>
-                <p>1. Buka studio Visual 2012 atau kemudian dan Buat Projek anda</p> 
-                <p>2. Pilih ASP.NET MVC4 Templat ProJET, Aplikasi Internet dan Razor ViewEngine</p>
-                <div><img src="/Images/Mvc4/1.png" width="529" height="479" alt="fb"></div>
-                <p>3. Buka folder Model dan Membuat Model baru yang dinamakan PayPalModel untuk mengadakan parameter pembayaran PayPal</p>
-                <div><img src="/Images/Mvc4/11.png" width="529" height="481" alt="fb"></div> 
-                <pre class="brush: js;">
-                <h2 style="font-size:14pt">Cubalah</h2>
-                <div style="border:#000080 1px solid; color:#000; font-family:'Courier New',Courier,Monospace; font-size:10pt">
-                <div style="background:#000080; color:#fff; font-family:Verdana,Tahoma,Arial,sans-serif; font-weight:bold; padding:2px 5px">
-                Kod Coretan</div>
-                <div style="background:#ddd; overflow:auto">
-                <ol style="background:#ffffff; margin:0 0 0 2.5em; padding:0 0 0 5px">
-                <li><span style="color:#0000ff">using</span> System; </li>
-                <li style="background:#f3f3f3"><span style="color:#0000ff">using</span> System.Windows.Forms; </li>
-                <li><span style="color:#0000ff">using</span> System.Drawing; </li>
-                <li style="background:#f3f3f3">&nbsp; </li>
-                <li><span style="color:#0000ff">namespace</span> WindowsFormsApplication1 </li>
-                <li style="background:#f3f3f3">{ </li>
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#808080">///</span><span style="color:#008000"></span><span style="color:#808080">&lt;summary&gt;</span><span style="color:#008000"></span></li>
-                <li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#808080">///</span><span style="color:#008000"> Class summary.</span></li>
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#808080">///</span><span style="color:#008000"></span><span style="color:#808080">&lt;/summary&gt;</span><span style="color:#008000"></span></li>
-                <li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff">partial</span><span style="color:#0000ff">class</span><span style="color:#2b91af">Form1</span> : Form </li>
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;{ </li>
-                <li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#808080">///</span><span style="color:#008000"></span><span style="color:#808080">&lt;summary&gt;</span><span style="color:#008000"></span></li>
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#808080">///</span><span style="color:#008000"> Constructor summary.</span></li>
-                <li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#808080">///</span><span style="color:#008000"></span><span style="color:#808080">&lt;/summary&gt;</span><span style="color:#008000"></span></li>
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span> Form1()</li>
-                <li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ </li>
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InitializeComponent();</li>
-                <li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} </li>
-                <li>&nbsp;&nbsp;&nbsp;&nbsp;} </li>
-                <li style="background:#f3f3f3">} </li></ol>
-                </div>
-                </div>    
-                </pre>
-                <p><ul>
-                   <li><a href="https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack" target="_blank">Visual Studio Web Developer prasyarat SP1 Express</a></li>
-                   <li><a href="https://go.microsoft.com/fwlink/?LinkID=243392" target="_blank">WPI installer untuk ASP.NET MVC 4</a></li>
-                   <li><a href="https://www.microsoft.com/web/gallery/install.aspx?appid=SQLLocalDBOnly_11_0" target="_blank">LocalDB</a></li>
-                   <li><a href="https://blogs.msdn.com/b/rickandy/archive/2012/08/02/installing-and-using-sql-server-data-tools-ssdt-on-visual-studio-2010-and-vwd.aspx" target="_blank">SSDT</a></li>                   
-               </ul></p>
-               <p>Jika anda menggunakan Visual Studio 2010 dan bukannya Visual Web Developer 2010, memasang <a href="https://go.microsoft.com/fwlink/?LinkID=243392" target="_blank">installer WPI untuk ASP.NET MVC 4</a> dan: <a href="https://www.microsoft.com/web/gallery/install.aspx?appsxml=&appid=VS2010SP1Pack" target="_blank">Visual Studio 2010 prasyarat</a></p>
-               <p>A Visual Web Developer projek dengan kod C # sumber boleh didapati untuk mengiringi topik ini. <a href="https://code.msdn.microsoft.com/Intro-to-ASPNET-MVC-4-61d0219d" target="_blank">Muat turun versi C #</a>.</p>
-               <p>Dalam tutorial anda menjalankan permohonan itu dalam Visual Studio. Anda juga boleh membuat permohonan yang boleh didapati melalui Internet dengan menggerakkan ia ke penyedia hosting. Microsoft menawarkan web hosting sehingga 10 laman web dalam <a href="http://azure.microsoft.com/en-us/pricing/free-trial/?WT.mc_id=A443DD604" target="_blank">akaun percubaan Windows Azure percuma</a>. Untuk maklumat mengenai bagaimana untuk menggerakkan satu projek Visual Studio web untuk Windows Azure Laman Web, lihat <a href="http://azure.microsoft.com/en-us/develop/net/" target="_blank">Cipta dan menggunakan laman web ASP.NET dan SQL Database dengan Visual Studio</a>. Tutorial yang juga menunjukkan bagaimana untuk menggunakan Rangka Kerja Entiti Kod migrasi Pertama anda untuk menggunakan pangkalan data SQL Server untuk Windows Azure SQL Pangkalan Data (dahulunya SQL Azure).</p>
-               <p>Tutorial ini ditulis oleh ZullDesign ( <a href="https://www.facebook.com/appharbor" target="_blank">VisualStudioDev</a> ).</p>
-               <p></p>
-                <a class="more" href="#">Read More</a>
-                <span class="line"></span>
-                <a href="#">12 Likes 14 Comments Share</a>
-                <span class="line"></span>
-        </div><!--End Blog Post-->
-         
-    </div><!--End Tab 1-->
-    
-    <div id="tab2" class="tab_content">
+	<div id="tab1" class="tab_content">
+	 
+		  <div class="post">
+		</div><!--End Blog Post-->
+		 
+		<div class="post">
+				<h3><a href="#">Integrasi ASP.NET MVC PayPal </a></h3>
+				<span class="postInfo">oleh <a href="#">ZullDesign</a> pada 1 Oktober, 2014</span>
+				<p>PayPal adalah perkhidmatan pembayaran dalam talian yang membolehkan anda membayar untuk pembelian, menerima bayaran, atau untuk menghantar dan menerima wang. Menerima perkhidmatan ini, seseorang perlu mengemukakan pelbagai maklumat kewangan kepada PayPal, seperti nombor kad kredit, penghantaran boleh dibuat melalui pos. Selepas itu, transaksi yang dijalankan tanpa perlu mendedahkan butiran kewangan, alamat e-mel dan kata laluan yang mencukupi.</p>
+				<p>untuk maklumat lanjut mengenai perniagaan, sila layari <a href="https://www.paypal.com/us/webapps/mpp/merchant" target="_blank">Laman Web rasmi Paypal</a> untuk perniagaan atau</br><a href="https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/detailed/" target="_blank">https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/detailed/</a></p>
+				<p>Dalam tutorial ini kita mencadangkan untuk mengintegrasikan penyelesaian pembayaran e-dagang PAYPAL.<br />Jadi, kami menggunakan Visual Studio C # dan ASP.NET MVC4 (untuk maklumat lanjut mengenai ASP.NET MVC sila lihat di <a href="https://www.asp.net/mvc/tutorials/mvc-4/getting-started-with-aspnet-mvc4/intro-to-aspnet-mvc-4" target="_blank">https://www.asp.net/mvc/tutorials/mvc-4/getting-started-with-aspnet-mvc4/intro-to-aspnet-mvc-4</a></p>
+				<p>Bersedia? Mari memulakan tutorial ini:</p>
+				<p>1. Buka studio Visual 2012 atau kemudian dan Buat Projek anda</p> 
+				<p>2. Pilih ASP.NET MVC4 Templat ProJET, Aplikasi Internet dan Razor ViewEngine</p>
+				<div><img src="/Images/Mvc4/1.png" width="529" height="479" alt="fb"></div>
+				<p>3. Buka folder Model dan Membuat Model baru yang dinamakan PayPalModel untuk mengadakan parameter pembayaran PayPal</p>
+				<div><img src="/Images/Mvc4/11.png" width="529" height="481" alt="fb"></div> 
+				<pre class="brush: js;">                
+				<div style="border:#000080 1px solid; color:#000; font-family:'Courier New',Courier,Monospace; font-size:10pt">
+				<div style="background:#000080; color:#fff; font-family:Verdana,Tahoma,Arial,sans-serif; font-weight:bold; padding:2px 5px">
+				Kod Coretan</div>
+				<div style="background:#ddd; overflow:auto">
+				<ol style="background:#ffffff; margin:0 0 0 2.5em; padding:0 0 0 5px">
+				<li><span style="color:#0000ff">using</span> System.Configuration; </li>
+				<li><span style="color:#0000ff">namespace</span> fb.Models </li>
+				<li style="background:#f3f3f3">{ </li>
+				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> class </span><span style="color:#2b91af">PayPalModel</span> </li>
+				<li>&nbsp;&nbsp;&nbsp;&nbsp;{ </li>            
+				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> string </span><span style="color:#2b91af"> cmd </span> </li>
+				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> string </span><span style="color:#2b91af"> business </span> </li>
+				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> string </span><span style="color:#2b91af"> no_shipping </span> </li>
+				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> string </span><span style="color:#2b91af"> return </span> </li>
+				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> string </span><span style="color:#2b91af"> cancel_return </span> </li>
+					<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> string </span><span style="color:#2b91af"> currency_code </span> </li>
+					<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> string </span><span style="color:#2b91af"> item_name </span> </li>
+					<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> string </span><span style="color:#2b91af"> amount </span> </li>
+					<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> string </span><span style="color:#2b91af"> actionURL </span> </li>
+				 
+				<li>&nbsp;&nbsp;&nbsp;&nbsp;} </li>
+				<li style="background:#f3f3f3">} </li></ol>
+				</div>
+				</div>    
+				</pre>
+				<p><ul>
+				   <li><a href="https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack" target="_blank">Visual Studio Web Developer prasyarat SP1 Express</a></li>
+				   <li><a href="https://go.microsoft.com/fwlink/?LinkID=243392" target="_blank">WPI installer untuk ASP.NET MVC 4</a></li>
+				   <li><a href="https://www.microsoft.com/web/gallery/install.aspx?appid=SQLLocalDBOnly_11_0" target="_blank">LocalDB</a></li>
+				   <li><a href="https://blogs.msdn.com/b/rickandy/archive/2012/08/02/installing-and-using-sql-server-data-tools-ssdt-on-visual-studio-2010-and-vwd.aspx" target="_blank">SSDT</a></li>                   
+			   </ul></p>
+			   <p>Jika anda menggunakan Visual Studio 2010 dan bukannya Visual Web Developer 2010, memasang <a href="https://go.microsoft.com/fwlink/?LinkID=243392" target="_blank">installer WPI untuk ASP.NET MVC 4</a> dan: <a href="https://www.microsoft.com/web/gallery/install.aspx?appsxml=&appid=VS2010SP1Pack" target="_blank">Visual Studio 2010 prasyarat</a></p>
+			   <p>A Visual Web Developer projek dengan kod C # sumber boleh didapati untuk mengiringi topik ini. <a href="https://code.msdn.microsoft.com/Intro-to-ASPNET-MVC-4-61d0219d" target="_blank">Muat turun versi C #</a>.</p>
+			   <p>Dalam tutorial anda menjalankan permohonan itu dalam Visual Studio. Anda juga boleh membuat permohonan yang boleh didapati melalui Internet dengan menggerakkan ia ke penyedia hosting. Microsoft menawarkan web hosting sehingga 10 laman web dalam <a href="http://azure.microsoft.com/en-us/pricing/free-trial/?WT.mc_id=A443DD604" target="_blank">akaun percubaan Windows Azure percuma</a>. Untuk maklumat mengenai bagaimana untuk menggerakkan satu projek Visual Studio web untuk Windows Azure Laman Web, lihat <a href="http://azure.microsoft.com/en-us/develop/net/" target="_blank">Cipta dan menggunakan laman web ASP.NET dan SQL Database dengan Visual Studio</a>. Tutorial yang juga menunjukkan bagaimana untuk menggunakan Rangka Kerja Entiti Kod migrasi Pertama anda untuk menggunakan pangkalan data SQL Server untuk Windows Azure SQL Pangkalan Data (dahulunya SQL Azure).</p>
+			   <p>Tutorial ini ditulis oleh ZullDesign ( <a href="https://www.facebook.com/appharbor" target="_blank">VisualStudioDev</a> ).</p>
+			   <p></p>
+				<a class="more" href="#">Read More</a>
+				<span class="line"></span>
+				<a href="#">12 Likes 14 Comments Share</a>
+				<span class="line"></span>
+		</div><!--End Blog Post-->
+		 
+	</div><!--End Tab 1-->
+	
+	<div id="tab2" class="tab_content">
  
 <h3>Apa yang Anda akan Bina</h3>
 <p>Versi dikemaskini jika tutorial ini boleh didapati <a href="https://www.asp.net/mvc/tutorials/mvc-5/introduction/getting-started" target="_blank">di sini</a> dengan menggunakan <a href="https://www.visualstudio.com/downloads/download-visual-studio-vs" target="_blank">Visual Studio 2013</a>. tutorial baru menggunakan ASP.NET MVC 5, yang menyediakan lebih banyak penambahbaikan tutorial ini.</p>
@@ -156,28 +152,28 @@
 <div><img src="/Images/Mvc4/YourProjectWillHave.PNG" width="668" height="520" alt="webdesigntuts+ logo"></div>
 <p>Keluar dari kotak template lalai ini memberi anda Home, kenalan dan Mengenai halaman. Ia juga menyediakan sokongan untuk mendaftar dan log masuk, dan pautan kepada Facebook dan Twitter. Langkah seterusnya adalah untuk mengubah bagaimana aplikasi ini berfungsi dan belajar sedikit tentang ASP.NET MVC. Menutup pelayar anda dan mari kita menukar beberapa kod.</p>
 </div><!--End Tab 2 -->
-     
-    <div id="tab3" class="tab_content">               
+	 
+	<div id="tab3" class="tab_content">               
 
-    </div><!--End Tab 3 -->
-     
-    <div id="tab4" class="tab_content">    
-    </div><!--End Tab 4 --> 
+	</div><!--End Tab 3 -->
+	 
+	<div id="tab4" class="tab_content">    
+	</div><!--End Tab 4 --> 
 </div><!--End Tab Container -->     
   </div><!--End Main Content-->     
-    <div class="sidebar">
+	<div class="sidebar">
 
-    Pencarian Filter
-    <form action="" method="get">
-            <input name="search" class="search" placeholder="Filter apphb+ posts">
-            </form>
+	Pencarian Filter
+	<form action="" method="get">
+			<input name="search" class="search" placeholder="Filter apphb+ posts">
+			</form>
 
-    Facebook Like dan Button
-    <a class="button left" href="https://www.apphb.com/" target="_blank"><span class="buttonimage left"></span>Laman Web</a>
-           <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=106251549399031&amp;xfbml=1"></script><fb:like href="http://apps.facebook.com/visualstudiodev"layout="button_count" width="75" show_faces="true" action="like" font="lucida grande"></fb:like>
-           <a class="button right" href="#"><span class="buttonimage left"></span>Log Keluar</a>            
-    
-    </div><!--End Sidebar-->
+	Facebook Like dan Button
+	<a class="button left" href="https://www.apphb.com/" target="_blank"><span class="buttonimage left"></span>Laman Web</a>
+		   <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=106251549399031&amp;xfbml=1"></script><fb:like href="http://apps.facebook.com/visualstudiodev"layout="button_count" width="75" show_faces="true" action="like" font="lucida grande"></fb:like>
+		   <a class="button right" href="#"><span class="buttonimage left"></span>Log Keluar</a>            
+	
+	</div><!--End Sidebar-->
 </div><!--End Wrapper -->
 </body>
 </html>

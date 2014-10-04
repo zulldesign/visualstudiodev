@@ -87,42 +87,43 @@
 				Kod Coretan</div>
 				<div style="background:#ddd; overflow:auto">
 				<ol style="background:#ffffff; margin:0 0 0 2.5em; padding:0 0 0 5px">
-				<li><span style="color:#0000ff">using</span> System.Configuration; </li>
-				<span style="color:#0000ff">namespace</span> fb.Models 
-				<li style="background:#f3f3f3">{ </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> class </span><span style="color:#2b91af">PayPalModel</span> </li>
-				<li>&nbsp;&nbsp;&nbsp;&nbsp;{ </li>            
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> string </span><span style="color:#2b91af">cmd { get; set; }</span> </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> string </span><span style="color:#2b91af">business { get; set; }</span> </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> string </span><span style="color:#2b91af">no_shipping { get; set; }</span> </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> string </span><span style="color:#2b91af">return { get; set; }</span> </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> string </span><span style="color:#2b91af">cancel_return { get; set; }</span> </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> string </span><span style="color:#2b91af">notify_url { get; set; }</span> </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> string </span><span style="color:#2b91af">currency_code { get; set; }</span> </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> string </span><span style="color:#2b91af">item_name { get; set; }</span> </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> string </span><span style="color:#2b91af">amount { get; set; }</span> </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span><span style="color:#0000ff"> string </span><span style="color:#2b91af">actionURL { get; set; }</span> </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">public</span> PayPalModel<span style="color:#2b91af">(bool useSandbox)</span> </li>
-				<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">this</span> .cmd = "_xclick"; </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">this</span> .business = ConfigurationManager.AppSettings["business"]; </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">this</span> .cancel_return = ConfigurationManager.AppSettings["cancel_return"]; </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">this</span> .return = ConfigurationManager.AppSettings["return"]; </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">if</span> (useSandbox) </li>				
-				<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">this</span> .actionURL = ConfigurationManager.AppSettings["test_url"]; </li>
-				<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">else</span>
-				<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">this</span> .actionURL = ConfigurationManager.AppSettings["Prod_url"]; </li>
-				<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ </li>
-				<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#808080"></span><span style="color:#008000">// We can add parameters here, for example OrderId, CustomerId, etc....</span></li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">this</span> .notify_url = ConfigurationManager.AppSettings["notify_url"]; </li>
-				<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#808080"></span><span style="color:#008000">// We can add parameters here, for example OrderId, CustomerId, etc....</span></li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#0000ff">this</span> .currency_code = ConfigurationManager.AppSettings["currency_code"]; </li>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ </li></ol>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ </li></ol>
-				<li style="background:#f3f3f3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ </li></ol>
+				using System.Configuration;
+namespace fb.Models
+{
+	public class PayPalModel
+	{
+		public string cmd { get; set; }
+		public string business { get; set; }
+		public string no_shipping { get; set; }
+		public string return { get; set; }
+		public string cancel_return { get; set; }
+		public string notify_url { get; set; }
+		public string currency_code { get; set; }
+		public string item_name { get; set; }
+		public string amount { get; set; }
+		public string actionURL { get; set; }
+		
+		public PayPalModel(bool useSandbox)
+		{
+			this.cmd = "_xclick";
+			this.business = ConfigurationManager.AppSettings["business"];
+			this.cancel_return = ConfigurationManager.AppSettings["cancel_return"];
+			this.return = ConfigurationManager.AppSettings["return"];
+			if (useSandbox)
+			{
+				this.actionURL = ConfigurationManager.AppSettings["test_url"];
+			}
+			else
+			{
+				this.actionURL = ConfigurationManager.AppSettings["Prod_url"];
+			}
+			// We can add parameters here, for example OrderId, CustomerId, etc....
+			this.notify_url = ConfigurationManager.AppSettings["notify_url"];
+			// We can add parameters here, for example OrderId, CustomerId, etc....
+			this.currency_code = ConfigurationManager.AppSettings["currency_code"];
+		}
+	}
+}
 				</div>
 				</div>    
 				</pre>

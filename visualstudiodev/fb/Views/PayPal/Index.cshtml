@@ -128,7 +128,7 @@ namespace fb.Models
 				</div>    
 				</pre>
 				<p>4. Buat Paypal Controller</p>
-				<div><img src="/Images/Mvc4/4.png" width="529" height="358" alt="fb"></div>
+				<div><img src="/Images/Mvc4/21.png" width="529" height="326" alt="fb"></div>
 				<pre class="brush: js;">                
 				<div style="border:#000080 1px solid; color:#000; font-family:'Courier New',Courier,Monospace; font-size:10pt">
 				<div style="background:#000080; color:#fff; font-family:Verdana,Tahoma,Arial,sans-serif; font-weight:bold; padding:2px 5px">
@@ -221,6 +221,62 @@ model fb.Models.PayPalModel
 		form.submit();
 	});
 </script>
+				</div>
+				</div>    
+				</pre>
+				<p>6. Sekarang menamatkan tindakan ValidateCommand kami PayPalController</p>
+				<div><img src="/Images/Mvc4/4.png" width="529" height="358" alt="fb"></div>
+				<pre class="brush: js;">                
+				<div style="border:#000080 1px solid; color:#000; font-family:'Courier New',Courier,Monospace; font-size:10pt">
+				<div style="background:#000080; color:#fff; font-family:Verdana,Tahoma,Arial,sans-serif; font-weight:bold; padding:2px 5px">
+				Kod Coretan</div>
+				<div style="background:#ddd; overflow:auto">
+				<ol style="background:#ffffff; margin:0 0 0 2.5em; padding:0 0 0 5px">
+using fb.Models;
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace fb.Controllers
+{
+	public class PayPalController : Controller
+	{
+		//[Authorize(Roles="Customers")]
+		public ActionResult ValidateCommand(string product, string totalPrice)
+		{
+			bool useSandbox = Convert.ToBoolean(ConfigurationManager.AppSettings["IsSandbox"]);
+			var paypal = new PayPalModel(useSandbox);
+
+			paypal.item_name = product;
+			paypal.amount = totalPrice;
+			return View(paypal);
+		}
+
+		public ActionResult RedirectFromPaypal()
+		{
+			return View();
+		}
+
+		public ActionResult CancelFromPaypal()
+		{
+			return View();
+		}
+
+		public ActionResult NotifyFromPaypal()
+		{
+			return View();
+		}
+		 
+		//<add key="business" value="asrce2_1311074442_biz@gmail.com" />
+		public ActionResult Index()
+		{
+			return View();
+		}
+	}
+}
 				</div>
 				</div>    
 				</pre>

@@ -284,6 +284,50 @@ namespace fb.Controllers
 				<div><img src="/Images/Mvc4/5.png" width="529" height="72" alt="fb"></div>
 				<p>8. Seterusnya menamatkan partialView kami dengan menambah kod jquery untuk auto mengemukakan borang kami. Skrip yang perlu adalah Jquery- {} js versi dan versi Jquery- {} .min.js. Di sini kita digunakan  Scripts.Render ("~ / berkas / jquery") untuk memasukkan semua skrip jQuery. Satu amalan yang lebih baik adalah untuk mengeksport semua fungsi javascript ke fail luaran tetapi fungsi mengemukakan mesti dipanggil hanya selepas memaparkan bidang tersembunyi borang kami</p>
 				<div><img src="/Images/Mvc4/6.png" width="394" height="486" alt="fb"></div>
+				<p>9. Langkah seterusnya ialah untuk mewujudkan bentuk checkout kami yang dispays nama produk, Kuantiti, harga dan Jumlah:</br>Jadi mengembangkan Lihat folder, mengembangkan folder Rumah dan fail index.csHtml terbuka. Gantikan kandungannya oleh yang berikut</p>
+				<div><img src="/Images/Mvc4/7.png" width="529" height="431" alt="fb"></div>
+				<pre class="brush: js;">                
+				<div style="border:#000080 1px solid; color:#000; font-family:'Courier New',Courier,Monospace; font-size:10pt">
+				<div style="background:#000080; color:#fff; font-family:Verdana,Tahoma,Arial,sans-serif; font-weight:bold; padding:2px 5px">
+				Kod Coretan</div>
+				<div style="background:#ddd; overflow:auto">
+				<ol style="background:#ffffff; margin:0 0 0 2.5em; padding:0 0 0 5px">
+{
+	ViewBag.Title = "Home Page";
+}
+using (Html.BeginForm("ValidateCommand", "PayPal"))
+{
+	<div>
+		<table >
+			<tr>
+				<td>
+					product Name:
+				</td>
+				<td>
+					<input type="text" name="product" value="Visual Studio 2013" readonly />
+				</td>
+			</tr>
+			<tr>
+				<td>
+				   Total Price:
+				</td>
+				<td>
+					$<input type="text" name="totalPrice" value="14800" readonly />
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>
+					<input type="submit" name="btnConfirm" value="Check Out with Paypal" />
+				</td>
+			</tr>
+		</table>
+	</div>
+}
+				</div>
+				</div>    
+				</pre>
 				<p><ul>
 				   <li><a href="https://www.microsoft.com/web/gallery/install.aspx?appid=VWD2010SP1Pack" target="_blank">Visual Studio Web Developer prasyarat SP1 Express</a></li>
 				   <li><a href="https://go.microsoft.com/fwlink/?LinkID=243392" target="_blank">WPI installer untuk ASP.NET MVC 4</a></li>

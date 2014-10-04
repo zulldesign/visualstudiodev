@@ -45,6 +45,16 @@ namespace fb.Models
 				this.actionURL = ConfigurationManager.AppSettings["test_url"];
 			}
 			else
+			{
+				this.actionURL = ConfigurationManager.AppSettings["Prod_url"];
+			}
+			// We can add parameters here, for example OrderId, CustomerId, etc....
+			this.notify_url = ConfigurationManager.AppSettings["notify_url"];
+			// We can add parameters here, for example OrderId, CustomerId, etc....
+			this.currency_code = ConfigurationManager.AppSettings["currency_code"];
+		}
+	}
+}
 function helloSyntaxHighlighter()
 {
 	return "hi!";

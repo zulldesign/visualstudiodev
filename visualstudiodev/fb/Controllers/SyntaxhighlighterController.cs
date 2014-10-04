@@ -21,5 +21,10 @@ namespace fb.Controllers
             return View();
         }
 
+        public ActionResult Contoh()
+        {
+            return View();
+        }
+
     }
 }

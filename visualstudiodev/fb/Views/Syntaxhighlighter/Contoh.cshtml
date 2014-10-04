@@ -33,6 +33,18 @@ namespace fb.Models
 		public string item_name { get; set; }
 		public string amount { get; set; }
 		public string actionURL { get; set; }
+		
+		public PayPalModel(bool useSandbox)
+		{
+			this.cmd = "_xclick";
+			this.business = ConfigurationManager.AppSettings["business"];
+			this.cancel_return = ConfigurationManager.AppSettings["cancel_return"];
+			this.@return = ConfigurationManager.AppSettings["return"];
+			if (useSandbox)
+			{
+				this.actionURL = ConfigurationManager.AppSettings["test_url"];
+			}
+			else
 function helloSyntaxHighlighter()
 {
 	return "hi!";

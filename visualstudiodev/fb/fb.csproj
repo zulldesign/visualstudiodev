@@ -213,6 +213,7 @@
     <Content Include="Images\Facebook\myjava.js" />
     <Content Include="Images\Facebook\style.css" />
     <Content Include="Images\Mvc4\1.png" />
+    <Content Include="Images\Mvc4\10.png" />
     <Content Include="Images\Mvc4\11.png" />
     <Content Include="Images\Mvc4\21.png" />
     <Content Include="Images\Mvc4\3.png" />
@@ -221,6 +222,7 @@
     <Content Include="Images\Mvc4\6.png" />
     <Content Include="Images\Mvc4\7.png" />
     <Content Include="Images\Mvc4\8.png" />
+    <Content Include="Images\Mvc4\9.png" />
     <Content Include="Images\Mvc4\newmvc4proj.png" />
     <Content Include="Images\Mvc4\NewProjectSm.PNG" />
     <Content Include="Images\Mvc4\P1_finished.PNG" />

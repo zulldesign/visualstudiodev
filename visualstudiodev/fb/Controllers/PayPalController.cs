@@ -42,7 +42,7 @@ namespace fb.Controllers
             return View();
         }
 
-        public ActionResult Software-Developer-Kit-untuk-ASPNet()
+        public ActionResult Software_Developer_Kit_untuk_ASPNet()
         {
             return View();
         }

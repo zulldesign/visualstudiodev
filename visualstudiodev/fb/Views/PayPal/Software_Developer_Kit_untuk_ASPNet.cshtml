@@ -79,39 +79,11 @@
 				<p>4. Membuka aplikasi web ASP.NET anda dalam Visual Studio NET 2012</p> 
 				<p>5. Buka fail Web.config dan menambah kunci appSettings dinamakan "PayPal_BusinessEmail" dan tentukan nilai</p>
 				<div><img src="/Images/Mvc4/bnr_merchantReferralBonus_150x150.gif" width="150" height="150" alt="fb"></div>
-				<pre class="brush: js;">                
-				<div style="border:#000080 1px solid; color:#000; font-family:'Courier New',Courier,Monospace; font-size:10pt">
-				<div style="background:#000080; color:#fff; font-family:Verdana,Tahoma,Arial,sans-serif; font-weight:bold; padding:2px 5px">
-				Kod Coretan</div>
-				<div style="background:#ddd; overflow:auto">
-				<ol style="background:#ffffff; margin:0 0 0 2.5em; padding:0 0 0 5px">
 				<configuration> 
-				<appSettings>
-				<add key="webpages:Version" value="2.0.0.0" />
-				<add key="webpages:Enabled" value="false" />
-				<add key="PreserveLoginUrl" value="true" />
-				<add key="ClientValidationEnabled" value="true" />
-				<add key="UnobtrusiveJavaScriptEnabled" value="true" />
-				<add key="Facebook:AppId" value="106251549399031" />
-				<add key="Facebook:AppSecret" value="662cddbebad53885ede584b7dec28f2a" />
-				<add key="Facebook:AppNamespace" value="visualstudiodev" />
-				<add key="Facebook:AuthorizationRedirectPath" value="~/Home/Permissions" />
-				<add key="Facebook:VerifyToken:User" value="" />
-				<add key="business" value="admin@zulldesign.ml"/>
-				<add key="IsSandbox" value="true" />
-				<add key="currency_code" value="MYR" />
-				<add key="return" value="https://visualstudiodev.apphb.com/PayPal/RedirectFromPaypal" />
-				<add key="cancel_return" value="https://visualstudiodev.apphb.com/PayPal/CancelFromPaypal" />
-				<add key="notify_url" value="https://visualstudiodev.apphb.com/PayPal/NotifyFromPaypal" />
-
-				<add key="test_url" value="https://www.sandbox.paypal.com/cgi-bin/webscr" />
-				<add key="Prod_url" value="https://www.sandbox.paypal.com/cgi-bin/webscr" />
-  
-				</appSettings> 				 
+				<appSettings> 
+				<add key="PayPal_BusinessEmail" value="XXX" /> 
+				</appSettings> 
 				</configuration> 
-				</div>
-				</div>    
-				</pre>
 				<div><img src="/Images/Mvc4/11.png" width="529" height="481" alt="fb"></div>				
 				<p>4. Buat Paypal Controller</p>
 				<div><img src="/Images/Mvc4/21.png" width="529" height="326" alt="fb"></div>

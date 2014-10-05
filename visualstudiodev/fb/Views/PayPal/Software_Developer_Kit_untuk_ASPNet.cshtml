@@ -1,5 +1,348 @@
-﻿@{
-    ViewBag.Title = "Software_Developer_Kit_untuk_ASPNet";
+﻿@using fb.Models
+@using Microsoft.AspNet.Mvc.Facebook.Models
+@model MyAppUser
+@{
+	ViewBag.Title = "PayPal ASP.Net SDK";
 }
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Integrasi ASP.NET MVC PayPal</title>
+ 
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+<link rel="stylesheet" type="text/css" href="/Images/Facebook/style.css">
+<link type="text/css" rel="stylesheet" href="styles/shCoreDefault.css"/>
+<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+<script src="/Images/Facebook/myjava.js" type="text/javascript"></script>
+<script type="text/javascript" src="scripts/shCore.js"></script>
+<script type="text/javascript" src="scripts/shBrushJScript.js"></script>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+ 
+<body>
+@{
+	ViewBag.Title = "Home Page";
+}
+@using (Html.BeginForm("ValidateCommand", "PayPal"))
+{
+	<div>
+		<table >
+			<tr>
+				<td>
+					Nama Produk:
+				</td>
+				<td>
+					<input type="text" name="product" value="Visual Studio 2013" readonly />
+				</td>
+			</tr>
+			<tr>
+				<td>
+				   Jumlah Harga:
+				</td>
+				<td>
+				   RM <input type="text" name="totalPrice" value="20.00" readonly />
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>
+					<input type="submit" name="btnConfirm" value="Check Out Dengan Paypal" />
+				</td>
+			</tr>
+		</table>
+	</div>
+}
+<div class="wrapper">
+ 
+	<div class="maincontent">        
+		 
+		<ul class="tabs">
+			<li><a href="https://www.apphb.com">1. Integrasi ASP.NET MVC PayPal </a></li>            
+		</ul>
+ 
+<div class="tab_container">
+	<div id="tab1" class="tab_content">
+	 
+		  <div class="post">
+		</div><!--End Blog Post-->
+		 
+		<div class="post">
+				<h3><a href="#">Integrasi ASP.NET MVC PayPal </a></h3>
+				<span class="postInfo">oleh <a href="#">ZullDesign</a> pada 1 Oktober, 2014</span>
+				<p>PayPal adalah perkhidmatan pembayaran dalam talian yang membolehkan anda membayar untuk pembelian, menerima bayaran, atau untuk menghantar dan menerima wang. Menerima perkhidmatan ini, seseorang perlu mengemukakan pelbagai maklumat kewangan kepada PayPal, seperti nombor kad kredit, penghantaran boleh dibuat melalui pos. Selepas itu, transaksi yang dijalankan tanpa perlu mendedahkan butiran kewangan, alamat e-mel dan kata laluan yang mencukupi.</p>
+				<p>untuk maklumat lanjut mengenai perniagaan, sila layari <a href="https://www.paypal.com/us/webapps/mpp/merchant" target="_blank">Laman Web rasmi Paypal</a> untuk perniagaan atau</br><a href="https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/detailed/" target="_blank">https://developer.paypal.com/webapps/developer/docs/integration/direct/log-in-with-paypal/detailed/</a></p>
+				<p>Dalam tutorial ini kita mencadangkan untuk mengintegrasikan penyelesaian pembayaran e-dagang PAYPAL.<br />Jadi, kami menggunakan Visual Studio C # dan ASP.NET MVC4 (untuk maklumat lanjut mengenai ASP.NET MVC sila lihat di <a href="https://www.asp.net/mvc/tutorials/mvc-4/getting-started-with-aspnet-mvc4/intro-to-aspnet-mvc-4" target="_blank">https://www.asp.net/mvc/tutorials/mvc-4/getting-started-with-aspnet-mvc4/intro-to-aspnet-mvc-4</a></p>
+				<p>Bersedia? Mari memulakan tutorial ini:</p>
+				<p>1. Buka studio Visual 2012 atau kemudian dan Buat Projek anda</p> 
+				<p>2. Pilih ASP.NET MVC4 Templat ProJET, Aplikasi Internet dan Razor ViewEngine</p>
+				<div><img src="/Images/Mvc4/1.png" width="529" height="479" alt="fb"></div>
+				<p>3. Buka folder Model dan Membuat Model baru yang dinamakan PayPalModel untuk mengadakan parameter pembayaran PayPal</p>
+				<div><img src="/Images/Mvc4/11.png" width="529" height="481" alt="fb"></div> 
+				<pre class="brush: js;">                
+				<div style="border:#000080 1px solid; color:#000; font-family:'Courier New',Courier,Monospace; font-size:10pt">
+				<div style="background:#000080; color:#fff; font-family:Verdana,Tahoma,Arial,sans-serif; font-weight:bold; padding:2px 5px">
+				Kod Coretan</div>
+				<div style="background:#ddd; overflow:auto">
+				<ol style="background:#ffffff; margin:0 0 0 2.5em; padding:0 0 0 5px">
+using System.Configuration;
+namespace fb.Models
+{
+	public class PayPalModel
+	{
+		public string cmd { get; set; }
+		public string business { get; set; }
+		public string no_shipping { get; set; }
+		public string return { get; set; }
+		public string cancel_return { get; set; }
+		public string notify_url { get; set; }
+		public string currency_code { get; set; }
+		public string item_name { get; set; }
+		public string amount { get; set; }
+		public string actionURL { get; set; }
+		
+		public PayPalModel(bool useSandbox)
+		{
+			this.cmd = "_xclick";
+			this.business = ConfigurationManager.AppSettings["business"];
+			this.cancel_return = ConfigurationManager.AppSettings["cancel_return"];
+			this.return = ConfigurationManager.AppSettings["return"];
+			if (useSandbox)
+			{
+				this.actionURL = ConfigurationManager.AppSettings["test_url"];
+			}
+			else
+			{
+				this.actionURL = ConfigurationManager.AppSettings["Prod_url"];
+			}
+			// We can add parameters here, for example OrderId, CustomerId, etc....
+			this.notify_url = ConfigurationManager.AppSettings["notify_url"];
+			// We can add parameters here, for example OrderId, CustomerId, etc....
+			this.currency_code = ConfigurationManager.AppSettings["currency_code"];
+		}
+	}
+}
+				</div>
+				</div>    
+				</pre>
+				<p>4. Buat Paypal Controller</p>
+				<div><img src="/Images/Mvc4/21.png" width="529" height="326" alt="fb"></div>
+				<pre class="brush: js;">                
+				<div style="border:#000080 1px solid; color:#000; font-family:'Courier New',Courier,Monospace; font-size:10pt">
+				<div style="background:#000080; color:#fff; font-family:Verdana,Tahoma,Arial,sans-serif; font-weight:bold; padding:2px 5px">
+				Kod Coretan</div>
+				<div style="background:#ddd; overflow:auto">
+				<ol style="background:#ffffff; margin:0 0 0 2.5em; padding:0 0 0 5px">
+using fb.Models;
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
 
-<h2>Software_Developer_Kit_untuk_ASPNet</h2>
+namespace fb.Controllers
+{
+	public class PayPalController : Controller
+	{
+		//[Authorize(Roles="Customers")]
+		public ActionResult ValidateCommand(string product, string totalPrice)
+		{
+			bool useSandbox = Convert.ToBoolean(ConfigurationManager.AppSettings["IsSandbox"]);
+			var paypal = new PayPalModel(useSandbox);
+
+			paypal.item_name = product;
+			paypal.amount = totalPrice;
+			return View(paypal);
+		}
+
+		public ActionResult RedirectFromPaypal()
+		{
+			return View();
+		}
+
+		public ActionResult CancelFromPaypal()
+		{
+			return View();
+		}
+
+		public ActionResult NotifyFromPaypal()
+		{
+			return View();
+		}
+		 
+		//<add key="business" value="asrce2_1311074442_biz@gmail.com" />
+		public ActionResult Index()
+		{
+			return View();
+		}
+	}
+}
+				</div>
+				</div>    
+				</pre>
+				<p>5. Sekarang Cipta Lihat Separa (ValidateCommand.csHtml) menggunakan Model kami. Jangan lupa bahawa semua bidang mesti jenis yang tersembunyi</p>
+				<div><img src="/Images/Mvc4/3.png" width="389" height="483" alt="fb"></div>
+				<pre class="brush: js;">                
+				<div style="border:#000080 1px solid; color:#000; font-family:'Courier New',Courier,Monospace; font-size:10pt">
+				<div style="background:#000080; color:#fff; font-family:Verdana,Tahoma,Arial,sans-serif; font-weight:bold; padding:2px 5px">
+				Kod Coretan</div>
+				<div style="background:#ddd; overflow:auto">
+				<ol style="background:#ffffff; margin:0 0 0 2.5em; padding:0 0 0 5px">
+model fb.Models.PayPalModel
+
+<body>
+	<form id="hiddenform" action=Model.actionURL>
+	Html.HiddenFor(model => model.cmd)
+	Html.HiddenFor(model => model.business)
+	Html.HiddenFor(model => model.no_shipping)
+	Html.HiddenFor(model => model.return)
+	Html.HiddenFor(model => model.cancel_return)
+	Html.HiddenFor(model => model.notify_url)
+	Html.HiddenFor(model => model.currency_code)
+	Html.HiddenFor(model => model.item_name)
+	Html.HiddenFor(model => model.amount)
+	</form>
+
+	<p style="text-align: center">
+		<h3>
+			Connecting to Paypal , please wait ...
+
+		</h3>
+	</p>
+</body>
+ Scripts.Render("~/bundles/jquery")
+
+<script type="text/javascript" language="javascript">
+	$(this.document).ready(function () {
+		var form = $("form");
+		form.submit();
+	});
+</script>
+				</div>
+				</div>    
+				</pre>
+				<p>6. Sekarang menamatkan tindakan ValidateCommand kami PayPalController</p>
+				<div><img src="/Images/Mvc4/4.png" width="529" height="358" alt="fb"></div>
+				<pre class="brush: js;">                
+				<div style="border:#000080 1px solid; color:#000; font-family:'Courier New',Courier,Monospace; font-size:10pt">
+				<div style="background:#000080; color:#fff; font-family:Verdana,Tahoma,Arial,sans-serif; font-weight:bold; padding:2px 5px">
+				Kod Coretan</div>
+				<div style="background:#ddd; overflow:auto">
+				<ol style="background:#ffffff; margin:0 0 0 2.5em; padding:0 0 0 5px">
+using fb.Models;
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace fb.Controllers
+{
+	public class PayPalController : Controller
+	{
+		//[Authorize(Roles="Customers")]
+		public ActionResult ValidateCommand(string product, string totalPrice)
+		{
+			bool useSandbox = Convert.ToBoolean(ConfigurationManager.AppSettings["IsSandbox"]);
+			var paypal = new PayPalModel(useSandbox);
+
+			paypal.item_name = product;
+			paypal.amount = totalPrice;
+			return View(paypal);
+		}
+
+		public ActionResult RedirectFromPaypal()
+		{
+			return View();
+		}
+
+		public ActionResult CancelFromPaypal()
+		{
+			return View();
+		}
+
+		public ActionResult NotifyFromPaypal()
+		{
+			return View();
+		}
+		 
+		//<add key="business" value="asrce2_1311074442_biz@gmail.com" />
+		public ActionResult Index()
+		{
+			return View();
+		}
+	}
+}
+				</div>
+				</div>    
+				</pre>
+				<p>7. Nota penting bagi mendapatkan jawatan tindakan kita. Jadi hanya pengguna yang telah kelayakan yang dibenarkan untuk membayar barang-barang (Untuk maklumat lebih lanjut mengenai mendapatkan aplikasi internet asp.NET MVC anda sila lihat pada tutorial kami <a href="https://logcorner.wordpress.com/2013/08/29/how-to-configure-custom-membership-and-role-provider-using-asp-net-mvc4/" target="_blank">Bagaimana untuk mengkonfigurasi Custom Keahlian dan Pembekal Peranan menggunakan ASP.NET MVC4</a></p>                
+				<div><img src="/Images/Mvc4/5.png" width="529" height="72" alt="fb"></div>
+				<p>8. Seterusnya menamatkan partialView kami dengan menambah kod jquery untuk auto mengemukakan borang kami. Skrip yang perlu adalah Jquery- {} js versi dan versi Jquery- {} .min.js. Di sini kita digunakan  Scripts.Render ("~ / berkas / jquery") untuk memasukkan semua skrip jQuery. Satu amalan yang lebih baik adalah untuk mengeksport semua fungsi javascript ke fail luaran tetapi fungsi mengemukakan mesti dipanggil hanya selepas memaparkan bidang tersembunyi borang kami</p>
+				<div><img src="/Images/Mvc4/6.png" width="394" height="486" alt="fb"></div>
+				<p>9. Langkah seterusnya ialah untuk mewujudkan bentuk checkout kami yang dispays nama produk, Kuantiti, harga dan Jumlah:</br>Jadi mengembangkan Lihat folder, mengembangkan folder Rumah dan fail index.csHtml terbuka. Gantikan kandungannya oleh yang berikut</p>
+				<div><img src="/Images/Mvc4/7.png" width="529" height="431" alt="fb"></div>
+				<pre class="brush: js;">                
+				<div style="border:#000080 1px solid; color:#000; font-family:'Courier New',Courier,Monospace; font-size:10pt">
+				<div style="background:#000080; color:#fff; font-family:Verdana,Tahoma,Arial,sans-serif; font-weight:bold; padding:2px 5px">
+				Kod Coretan</div>
+				<div style="background:#ddd; overflow:auto">
+				<ol style="background:#ffffff; margin:0 0 0 2.5em; padding:0 0 0 5px">
+{
+	ViewBag.Title = "Home Page";
+}
+using (Html.BeginForm("ValidateCommand", "PayPal"))
+{
+	<div>
+		<table >
+			<tr>
+				<td>
+					product Name:
+				</td>
+				<td>
+					<input type="text" name="product" value="Visual Studio 2013" readonly />
+				</td>
+			</tr>
+			<tr>
+				<td>
+				   Total Price:
+				</td>
+				<td>
+					$<input type="text" name="totalPrice" value="14800" readonly />
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>
+					<input type="submit" name="btnConfirm" value="Check Out with Paypal" />
+				</td>
+			</tr>
+		</table>
+	</div>
+}
+				</div>
+				</div>    
+				</pre>
+				<p>10. kita berada di akhir. Langkah terakhir kami adalah untuk mengemaskini fail web.config dengan settngs sesuai</p>
+				<div><img src="/Images/Mvc4/8.png" width="529" height="275" alt="fb"></div>
+				<p>11. Sekarang, mari kita pergi menguji penyelesaian kami:</p>
+				<p>12. Run permohonan (atau Tekan F5)</p>
+				<div><img src="/Images/Mvc4/9.png" width="471" height="190" alt="fb"></div>
+				<p>13. pembayaran Sahkan dengan klik pada butang Periksa Keluar Dengan PayPal, anda akan diarahkan ke laman pembayaran</p>
+				<div><img src="/Images/Mvc4/10.png" width="526" height="345" alt="fb"></div>
+				<p>Kita mempunyai ralat halaman kerana, kami tidak mempunyai akaun belum sah.</p>
+				<p>Sekarang masa untuk membuat akaun ujian dengan mengikuti pautan ini <a href="https://developer.paypal.com/webapps/developer/docs/classic/lifecycle/ug_sandbox/#accounts" target="_blank">https://developer.paypal.com/webapps/developer/docs/classic/lifecycle/ug_sandbox/#accounts</a></p>
+				<p>14. Terbuka Web.config nilai fail dan kemas kini perniagaan dengan akaun ujian anda</p>
+				<div><img src="/Images/Mvc4/111.png" width="529" height="250" alt="fb"></div>
+				<p>15. Jadi berlari semula permohonan anda. Sahkan atau Batal, dan lain-lain ...</p>
+				<div><img src="/Images/Mvc4/12.png" width="529" height="292" alt="fb"></div>
+				<p>Harap post ini membantu anda.</p>
+				<p><a href="https://go.microsoft.com/fwlink/?LinkID=243392" target="_blank">Muat turun Contoh</a></p>
+				<p>Nota: untuk Integrasi PayBox sila layari tutorial kami untuk PayBox</p>			            
+</body>
+</html>

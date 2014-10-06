@@ -1,0 +1,555 @@
+@charset "utf-8";
+/***** Body *****/
+body {
+	font: 13px/20px "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif; /* default to width=13; height=20 */
+    background: #FFF; 
+	margin: 0;
+	padding: 0;
+	text-align: center; /* centre the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+/* spip usually colours 'in-site' and 'out-site' links differently.
+I override this to colour them all the same */
+a.spip_in, 
+a.spip_out,
+a.spip_url,
+a{ color:#33F;  }
+a:hover{ 
+	color:#69F; 
+	text-decoration:underline;  
+}
+h1,h2, h3, h4, h5{  margin-top:0em; margin-bottom:0em } /* no margins for all headings */
+h1 {  font: 24px "Palatino Linotype", "Book Antiqua", Palatino, serif } 
+h2 {  font: 18px "Palatino Linotype", "Book Antiqua", Palatino, serif } 
+h3, h4 { font: 18px "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif  }
+h5 { font-weight:bold; font: 16px "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif; color:#455698 }
+h1, h2, h3{  font-weight:bold; color:#666 } /* default to width=12; height=18 */
+/* show h1 hyperlinks with dotted bottom border and no solid underline on hover */
+h1 a{ color:#00F; border-bottom-style:dotted; border-top-style:dotted; text-decoration:none; border-width:1px} 
+h1 a:hover{  color:#93F; text-decoration:none; } 
+h2 a{ color:#63F } 
+h2 a:hover{  color:#69F } 
+
+/*** SPIP TYPOGRAPHIC DEFAULTS ***/
+h3.spip{ font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif; color:#309; font-size:24px} 		 
+.spip_code, .spip_cadre { color:#309; font-weight:bold; font-family:"Courier New", Courier, monospace; font-size:13px }    
+.spip_cadre { width:98%; padding:10px; border: #36F 1px dashed; }
+
+
+/* Use fullWidtgh for (for example) left-aligned images and text that need to line up beneath one another rather than alongside */
+.fullWidth{ width:960px; clear:both }
+
+div#frontpagemainimage{ 
+	left:0px; 
+	top:0px; 
+	height:600px;
+	width:980px;
+	background-image:url(../IMG/ss2/frontpage/frontpage-main.jpg); 
+	margin:0;
+}
+div#frontpagebox{
+	position:relative;
+	left:295px;
+	top:475px;
+	height: 25px;
+	width: 635px;
+	border-top:thin #00CCFF solid;
+	border-bottom:thin #00CCFF solid;
+}
+
+div#frontpagebox2{ 
+	position:relative; 
+	left:295px; 
+	top:525px; 
+	height: 25px; 
+	width: 635px; 
+	border-top:thin #F36 solid;
+    border-bottom:thin #F36 solid;
+}
+
+
+.frontpageboxitem {
+ font-size: 14px;
+	width: 158px;
+	height: 25px; 
+	margin: 0;
+	float: left;
+	color: #9CF; /* pale blue */
+	text-align:center;
+}
+
+
+.frontpageboxitem a {
+	color:#9FF;
+	text-decoration:none;
+}
+.frontpageboxitem a:hover {
+	color:#3CF; /* mid blue */
+}
+
+
+
+.frontpageboxitem2 {
+ font-size: 14px;
+	width: 158px;
+	height: 25px; 
+	margin: 0;
+	float: left;
+	color: #CCCCCC; 
+	text-align:center;
+}
+
+
+.frontpageboxitem2 a {
+	color:#FCF;
+	text-decoration:none;
+}
+.frontpageboxitem2 a:hover {
+	color:#F39; /* mid blue */
+}
+
+div#frontpageblogitembox{ 
+	position:relative; 
+	left:25px; 
+	top:455px; 
+	height: 40px; 
+	width: 250px; 
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.blogitemheader {
+	color: #9CF; /* pale blue */
+	display:block;
+	/*  margin:0 0 5px; */
+ text-decoration:none;
+ font-size:11px;
+ font-weight:bold;
+
+}
+
+.blogitemlink {
+	font-size:11px;
+	margin: 0px;
+	padding: 0px;
+	color:#9FF;
+	text-decoration:none;
+}
+.blogitemlink a:hover {
+	color:#9FF; /* mid blue */
+}
+.blogitemlink li {
+	display: block;
+	list-style-type: none;
+	margin: 0px;
+}
+
+
+
+/***********************/
+/***** Main Layout *****/
+/***********************/
+/*
+
+structure is:
+- navbarContainer
+ -- navBar
+- centreRow
+  -- container
+    --- mainContent
+- footer
+  -- footerNav
+    --- footerColumns (etc.)
+*/
+/* --- NAVBAR --- */
+.mainLayout #navbarcontainer {
+	margin: 0;
+	padding: 0;
+	position:relative;
+	height:120px;
+	/*padding-top: 20px; *//*	background: #F2F2F2; */
+	background-image:url(../IMG/ss2/navbar2/navbar2-page-background.png);
+	background-repeat:repeat-x;	
+	clear:both;
+}
+.mainLayout #navbar {
+	width: 980px;
+	position:relative;
+	height:120px;
+	padding: 0;
+	margin: 0 auto;/* centre page */
+}
+/* --- end:navbar */
+
+/* --- CENTRE ROW (Main Editable area) -- */
+.mainLayout #centreRow{
+	width:100%;
+	position:relative;
+	clear:both;
+	padding:0;
+
+}
+.mainLayout #container {
+	width: 900px;
+	background: #FFFFFF;
+	margin: 0 auto; /* centre page */
+	text-align: left;
+}
+
+/* main 'editable' area - contains principal text and/or graphics*/
+.mainLayout #mainContent {
+	padding: 0;
+	background: #FFFFFF;
+}
+
+/* ---end:centreRow -- */
+
+
+/* --- FOOTER --- */
+
+/* footer - the horizontal area (containing links etc) at the bottom */
+.mainLayout #footer {
+	padding: 0; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	/* background-image:url('../IMG/ss2/footerbar/footer-bar.png');
+	background-repeat:no-repeat; */
+	height: 150px;
+	width:100%;
+	background-image:url(../IMG/ss2/footerbar/footer-bar.png);
+	background-repeat:repeat-x;
+	margin:0;
+	clear:both; /* make sure it doesn't 'float up' */
+	
+}
+.mainLayout #footer p {
+	margin: 0;
+	padding: 0;
+}
+
+/* the main footer div */
+.footernav {
+	width: 960px;
+	height: 150px;
+	margin: 0 auto;
+	text-align:left;
+}
+.footercolumn {
+ font-size: 12px;
+	width: 160px;
+	margin: 10px 0 0 15px;
+	float: left;
+}
+/* each item in a footer column */
+.footercolumn li a {
+	margin: 0 0 10px 0;
+	color: #CECECE; /* pale grey */
+	text-decoration: none;
+}
+.footercolumnheader {
+	color: #9CF; /* pale blue */
+	display:block;
+	/*  margin:0 0 5px; */
+ text-decoration:none;
+	font-weight:bold;
+}
+.footercolumnheader a {
+	color:#0FC;
+	text-decoration:none;
+}
+.footercolumnheader a:hover {
+	color:#9FF; /* mid blue */
+}
+.footerlinks {
+	margin: 0px;
+	padding: 0px;
+}
+.footerlinks a:hover {
+	color:#9FF; /* mid blue */
+}
+.footerlinks li {
+	display: block;
+	list-style-type: none;
+	margin: 0px;
+}
+
+/* --- end:Footer ---*/
+
+/* --- bookMarkRow --- */
+.mainLayout #bookmarksRow{
+	width:100%;
+	position:relative;
+	text-align:left;
+	clear:both;
+	padding:5px 0 5px 0;
+	color:#333
+}
+
+.floatRight{
+	float:right;
+}
+
+.mainLayout #bookmarksRow a{
+	text-decoration:underline;
+	color:#33F	
+}
+
+.mainLayout #bookmarksRow a:hover{
+	color:#66F
+}
+
+/* --- bottomRow (copyright etc) --- */
+.mainLayout #bottomRow{
+	width:100%;
+	position:relative;
+	text-align:left;
+	clear:both;
+	padding:2px 0 2px 10px;
+	margin:0;
+	background-color:#000078;
+	color:#CCC
+}
+/**********************/
+/*** end:MainLayout ***/
+/**********************/
+
+
+/**********************/
+/***    BOXOUTS     ***/
+/**********************/
+
+.articleIntro {
+	position:relative;
+	clear:both;
+	float:left;
+	padding:0;
+	width:100%;
+	color:#000;	
+}
+
+h1.blog-article-title {font-size:28px; color:#03C;  } 
+h2.blog-article-title {font-size:22px; color:#03C;  } 
+
+
+/* use strapline class instead of this
+.articleIntro .blog-subtitle {	
+	font-size: 14px;	
+	padding-left:6px;
+	margin-bottom:4px;
+} */
+.articleIntro .blog-author-name{ 
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif; 
+	font-size: 20px;	
+	font-weight:bold;
+	padding-left:6px;
+	margin-bottom:4px;
+	margin-top:6px;
+}
+.articleIntro .blog-date {
+	font-size: 12px;	
+	padding-left:6px;
+	margin-bottom:4px;
+}
+
+/* Box-out a rounded box containg some text */
+.box-out {
+	border:1px solid #E0E0E0;
+	position:relative;
+	clear:both;
+	float:left;
+	padding:0;
+	width:100%;
+}
+.box-out .cornertopleft {
+	height:8px;
+	width:8px;
+	background: url('../IMG/ss2/boxes/features.png') no-repeat;
+	position:absolute;
+	top:-1px;
+	left:-1px;
+	z-index:100;
+}
+.box-out .cornertopright {
+	height:8px;
+	width:8px;
+	background: url('../IMG/ss2/boxes/features.png') no-repeat -8px 0;
+	position:absolute;
+	top:-1px;
+	right:-1px;
+	z-index:100;
+}
+.box-out .cornerbottomleft {
+	height:8px;
+	width:8px;
+	background: url('../IMG/ss2/boxes/features.png') no-repeat 0px -8px;
+	position:absolute;
+	bottom:-1px;
+	left:-1px;
+	z-index:100;
+}
+.box-out .cornerbottomright {
+	height:8px;
+	width:8px;
+	background: url('../IMG/ss2/boxes/features.png') no-repeat -8px -8px;
+	position:absolute;
+	bottom:-1px;
+	right:-1px;
+	z-index:100;
+}
+/* pad text inside a box-out */
+.text-in-box {
+	padding: 15px
+}
+
+.text-in-big-box {
+	padding-bottom:50px;
+	padding-top:50px;
+	padding-left:100px;
+}
+
+.big-page { /* pad a div to create white space around it top+bottom */
+	padding-top:150px;
+	padding-bottom:350px;
+}
+
+/**********************/
+/***  end:boxouts   ***/
+/**********************/
+
+/*** RUBRIQUE ***/
+.rubrique-year {font-size:24px; font-weight:bold; padding:15px 0 5px 0} 
+.rubrique-month {font-size:18px; padding:2px 0 2px 20px} 
+.rubrique-article {padding-left:35px} 
+
+
+
+/*  ------------------------------------------
+/*  Forums (comments)
+/*  ------------------------------------------ */
+
+
+ul.forum-total {
+	display: block;
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+.forum-fil {
+	margin-top: 1em;
+}
+.forum-fil ul {
+	display: block;
+	margin: 0px;
+	margin-left: 2em;
+	padding: 0px;
+	list-style: none;
+}
+.forum-titre {
+	font-weight: bold;
+	font-size: 14px;
+	color:#CFF;
+}
+
+.forum-titre a {	/* used in spip standard forms to highlight preview comment header */
+	color:#CFC;
+}
+.forum-item {
+	margin: 0px;
+	padding: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 0.1em;
+	text-align: justify;
+	color: #303030;
+}
+.forum-repondre-message {
+	text-align: right;
+}
+
+/* Boite d'un forum : eclaircissement progressif des bords */
+
+ul .forum {
+	border:1px solid #E0E0E0;
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 1em;
+	list-style:none;
+}
+
+ul .forum-chapo {
+	border: 0px;
+	/* border-bottom: 1px dashed #b8b8b8; */
+	margin: 0px;
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 3px;
+	padding-bottom: 2px;
+	background: #006;
+	color:#CCF;
+}
+ul ul .forum-chapo {
+	background: #009;
+}
+ul ul ul .forum-chapo {
+	background: #00C;
+}
+ul ul ul ul .forum-chapo {
+	background: #00F;
+}
+ul ul ul ul ul .forum-chapo {
+	background: #03C;
+}
+
+/*** GRAPHICS ***/
+.headerdiv{
+	padding:0;
+	margin: 0;	
+}
+
+/*** TYPOGRAPHY ***/
+.intro{
+	font-size:14px;
+	/* padding-left:6px; */
+	color:#009;
+}
+.smalltext {	
+	font-size: 10px;
+}
+
+.mediumtext {	
+	font-size: 14px;
+}
+
+.strapline {	
+	font-size: 15px;	
+	font-variant:small-caps;
+	padding-left:6px;
+	padding-top:6px;
+	padding-bottom:5px;
+}
+
+/*** TABLES ***/
+.tabletext { 
+	text-transform: uppercase;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+}
+
+/*** SPIP OVERRIDES ****/
+.forml { width: 100% ; background-color: #F2F2FF;}
+.spip_encadrer { background-color: #0F0; color:#C09}
+.spip_bouton { background-color: #FFF;}
+.reponse_formulaire { color: #900; } /*  pre-moderation msg in comment form  */
+/* ul{ color:#933; list-style:none } */ /* defines -* list style */
+hr.spip { color:#CCC;
+		background-color:#CCC;
+		height:1px;
+		width:100%;
+		border:none}
+
+/*** HABILLAGE ***/
+/* required for site map layout ***/
+#conteneur { clear: both; float: left; width: 67%; overflow: hidden; }
+#contenu { padding-top: 0.30em; }
+#navigation { float: right; width: 30%; margin-top: 1em; overflow: hidden; }
+#extra { float: right; clear: right; width: 30%; margin-top: 1em; overflow: hidden; }
+
+/* hidden field in contact form to fool spambots */
+#email2{ display: none }

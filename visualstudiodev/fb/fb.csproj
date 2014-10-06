@@ -384,6 +384,7 @@
     <Content Include="Views\Syntaxhighlighter\Welcome.cshtml" />
     <Content Include="Views\Syntaxhighlighter\Contoh.cshtml" />
     <Content Include="Views\PayPal\Software_Developer_Kit_untuk_ASPNet.cshtml" />
+    <Content Include="Views\PayPal\Flash_Filem_dalam_Visual_Studio.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

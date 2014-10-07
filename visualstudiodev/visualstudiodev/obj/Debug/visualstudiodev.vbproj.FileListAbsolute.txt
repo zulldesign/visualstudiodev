@@ -47,3 +47,4 @@ C:\Users\User\Workspace\visualstudiodev\visualstudiodev\visualstudiodev\obj\Debu
 C:\Users\User\Workspace\visualstudiodev\visualstudiodev\visualstudiodev\obj\Debug\visualstudiodev.dll
 C:\Users\User\Workspace\visualstudiodev\visualstudiodev\visualstudiodev\obj\Debug\visualstudiodev.xml
 C:\Users\User\Workspace\visualstudiodev\visualstudiodev\visualstudiodev\obj\Debug\visualstudiodev.pdb
+C:\Users\User\Workspace\visualstudiodev\visualstudiodev\visualstudiodev\obj\Debug\visualstudiodev.vbprojResolveAssemblyReference.cache

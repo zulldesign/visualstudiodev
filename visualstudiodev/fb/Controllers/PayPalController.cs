@@ -52,9 +52,12 @@ namespace fb.Controllers
             return View();
         }
 
-        public ActionResult Blog()
+        public ActionResult Blog(string name, int numTimes = 1)
         {
-            return View(Bagaimana_Untuk_Membuat_blog_Mudah_Part1);
+            ViewBag.Message = "Hello " + name;
+            ViewBag.NumTimes = numTimes;
+
+            return View();
         }
 
     }

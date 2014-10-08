@@ -1,6 +1,45 @@
 ﻿@{
-    ViewBag.Title = "Blog";
+	ViewBag.Title = "Blog";
 }
-
 <h2>Blog</h2>
+<p id="demo"></p>
 
+<button onclick="clearInterval(myVar)">Stop time</button>
+
+<script>
+var myVar = setInterval(function(){myTimer()},1000);
+function myTimer() {
+	var d = new Date();
+	document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+</script>
+@using (Html.BeginForm("ValidateCommand", "PayPal"))
+{
+	<div>
+		<table >
+			<tr>
+				<td>
+					Nama Produk:
+				</td>
+				<td>
+					<input type="text" name="product" value="Bagaimana Untuk Membuat Blog Mudah Part1" readonly />
+				</td>
+			</tr>
+			<tr>
+				<td>
+				   Jumlah Harga:
+				</td>
+				<td>
+					RM <input type="text" name="totalPrice" value="19.90" readonly />
+				</td>
+			</tr>
+			<tr>
+				<td>
+				</td>
+				<td>
+					<input type="submit" name="btnConfirm" value="Check Out with Paypal" />
+				</td>
+			</tr>
+		</table>
+	</div>
+}

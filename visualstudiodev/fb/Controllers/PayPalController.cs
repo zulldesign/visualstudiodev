@@ -52,5 +52,10 @@ namespace fb.Controllers
             return View();
         }
 
+        public ActionResult Blog()
+        {
+            return View(Bagaimana_Untuk_Membuat_blog_Mudah_Part1);
+        }
+
     }
 }

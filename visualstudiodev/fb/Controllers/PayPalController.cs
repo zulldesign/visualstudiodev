@@ -54,7 +54,7 @@ namespace fb.Controllers
 
         public ActionResult Blog(string name, int numTimes = 1)
         {
-            ViewBag.Message = "Hello " + name;
+            ViewBag.Message = "Bagaimana-Untuk-Membuat-Blog-Mudah-Part " + name;
             ViewBag.NumTimes = numTimes;
 
             return View();

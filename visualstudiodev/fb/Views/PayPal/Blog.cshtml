@@ -43,3 +43,34 @@ function myTimer() {
 		</table>
 	</div>
 }
+<h2 id="intro">1. Introduction</h2>
+
+<p>
+  There are different ways we can learn a technology; by reading books, by attending conferences, by doing samples and more. I think one of the best way is by creating something useful for us using the technology. One of the useful thing that you could create easily is a blog. In this multi-part series, we are going to learn <span class="span-highlight-text">ASP.NET MVC</span> step by step by creating a blog from scratch.
+</p>
+
+<div style="text-align: center;" class="image-wrapper">
+  <a target="_blank" href="/Source-Codes/Images/simpleblog_blog_look.png" title="JustBlog">
+	<img src="/Source-Codes/Images/simpleblog_blog_look.png" class="post-diagram" alt="JustBlog">
+  </a>
+  <p class="post-img-caption">JustBlog</p>
+</div>
+
+<p>
+  To keep things simple we are not going to build the commenting system instead we are going to use <span class="span-highlight-text">Disqus</span>. I encourage you to build the commenting system by yourself and that would be a good exercise for you.
+</p>
+
+<p>
+  We are going to use <span class="span-highlight-text">ASP.NET MVC 4</span> to develop the application. I'm not good at <span class="span-highlight-text">Entity Framework</span> and we are going to use <span class="span-highlight-text">Fluent NHibernate/NHibernate</span> combo to build the data-access system. You could use <span class="span-highlight-text">Entity Framework</span> if you like. Finally, we are going to use <span class="span-highlight-text">Ninject</span> for dependency injection because of it's simplicity.
+</p>
+
+<p>
+  In the first part of the series we are going to build the basic infrastructure of the blog. We are going to create the necessary model classes, data access components, controllers and views. At the end of this part we have a working blog where we can see the latest posts, read a complete post, browse posts based upon a category or tag and even search for interested posts.
+</p>
+
+<p>
+  In the second part, we are going to build an admin console to manage our posts, tags and categories.
+</p>
+
+<p>
+  In the final part we are going to integrate <span class="span-highlight-text">Disqus</span> commenting system with our blog. We also see about integrating <span class="span-highlight-text">AddThis</span>, <span class="span-highlight-text">FeedBurner</span> for sharing and subscriptions. Last but not least, we also take necessary measurements for SEO.

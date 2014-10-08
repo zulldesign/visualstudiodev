@@ -414,6 +414,7 @@
     <Content Include="Views\PayPal\Software_Developer_Kit_untuk_ASPNet.cshtml" />
     <Content Include="Views\PayPal\Flash_Filem_dalam_Visual_Studio.cshtml" />
     <Content Include="Views\Product\Index.cshtml" />
+    <Content Include="Views\PayPal\Blog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
